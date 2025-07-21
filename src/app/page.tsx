@@ -1,10 +1,11 @@
-import TestCarousel from "@/components/TestCarousel";
+import Carousel from "@/components/Carousel";
 
 export default function Home() {
   return (
     <main>
       {/* <div className="relative"> */}
-      <TestCarousel />
+      {/* <TestCarousel /> */}
+      <Carousel />
       {/* </div> */}
     </main>
   );
