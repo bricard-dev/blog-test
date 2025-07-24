@@ -29,10 +29,10 @@ export const carouselSlides: Article[] = [
   {
     id: 3,
     image: {
-      src: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://images.unsplash.com/photo-1470293186624-d1901c45515b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Mountain lake",
     },
-    category: "Wellness",
+    category: "Espagne",
     title:
       "Immersion en forêt andalouse : randonnée ressourçante près de Séville",
     date: "02 juin 2025",
