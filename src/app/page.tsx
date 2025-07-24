@@ -1,12 +1,9 @@
-import Carousel from "@/components/Carousel";
+import ImageCarousel from "@/components/carousel/ImageCarousel";
 
 export default function Home() {
   return (
     <main>
-      {/* <div className="relative"> */}
-      {/* <TestCarousel /> */}
-      <Carousel />
-      {/* </div> */}
+      <ImageCarousel />
     </main>
   );
 }
