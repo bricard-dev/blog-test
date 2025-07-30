@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
 import "./globals.css";

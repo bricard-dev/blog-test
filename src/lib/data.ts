@@ -4,7 +4,7 @@ export const carouselSlides: Article[] = [
   {
     id: 1,
     image: {
-      src: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp",
       alt: "Forest path",
     },
     category: "Espagne",
@@ -16,7 +16,7 @@ export const carouselSlides: Article[] = [
   {
     id: 2,
     image: {
-      src: "https://images.unsplash.com/photo-1515268064940-5150b7c29f35?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://images.unsplash.com/photo-1515268064940-5150b7c29f35?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp",
       alt: "Mountain landscape",
     },
     category: "France",
@@ -29,7 +29,7 @@ export const carouselSlides: Article[] = [
   {
     id: 3,
     image: {
-      src: "https://images.unsplash.com/photo-1470293186624-d1901c45515b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://images.unsplash.com/photo-1470293186624-d1901c45515b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp",
       alt: "Mountain lake",
     },
     category: "Espagne",

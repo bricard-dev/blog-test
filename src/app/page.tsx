@@ -1,14 +1,13 @@
-import AboutSection from "@/components/AboutSection";
-import ImageCarousel from "@/components/carousel/ImageCarousel";
+import AboutSection from "@/components/home/about";
+import HeroSection from "@/components/home/hero";
+import ThemeSection from "@/components/home/theme";
 
 export default function Home() {
   return (
     <main>
-      <ImageCarousel />
-      <div className="relative h-full w-full overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[url('/images/background.jpg')] bg-cover bg-center opacity-5" />
-        <AboutSection />
-      </div>
+      <HeroSection />
+      <AboutSection />
+      <ThemeSection />
     </main>
   );
 }

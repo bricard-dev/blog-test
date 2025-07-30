@@ -8,6 +8,7 @@ import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -231,9 +232,80 @@ function CarouselNext({
   );
 }
 
+type CarouselDotsProps = React.HTMLAttributes<"div"> & {
+  align?: "left" | "center" | "right";
+  activeDotClassName?: string;
+  inactiveDotClassName?: string;
+  autoplay?: ReturnType<typeof Autoplay>;
+};
+
+function CarouselDots({
+  className,
+  align = "center",
+  activeDotClassName = "bg-primary",
+  inactiveDotClassName = "bg-white",
+  autoplay,
+  ...props
+}: CarouselDotsProps & React.ComponentProps<"div">) {
+  const { api } = useCarousel();
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+
+  const handleClick = React.useCallback(
+    (index: number) => () => {
+      api?.scrollTo(index);
+      autoplay?.reset();
+    },
+    [api, autoplay],
+  );
+
+  React.useEffect(() => {
+    if (!api) return;
+    setScrollSnaps(api.scrollSnapList());
+    const onSelect = () => setSelectedIndex(api.selectedScrollSnap());
+    api.on("select", onSelect);
+    onSelect();
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  if (!api || scrollSnaps.length <= 1) return null;
+
+  const alignClass =
+    align === "left"
+      ? "justify-start"
+      : align === "right"
+        ? "justify-end"
+        : "justify-center";
+
+  return (
+    <div
+      className={cn("mt-4 flex gap-2", alignClass, className)}
+      data-slot="carousel-dots"
+      {...props}
+    >
+      {scrollSnaps.map((_, index) => (
+        <Button
+          key={index}
+          variant="ghost"
+          size="icon"
+          className={cn(
+            "pointer-events-auto h-2.5 w-2.5 rounded-full p-0 transition-colors",
+            selectedIndex === index ? activeDotClassName : inactiveDotClassName,
+          )}
+          onClick={handleClick(index)}
+          aria-label={`Aller à la slide ${index + 1}`}
+        />
+      ))}
+    </div>
+  );
+}
+
 export {
   Carousel,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
