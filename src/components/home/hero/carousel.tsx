@@ -1,15 +1,18 @@
 "use client";
 
-import { carouselSlides } from "@/lib/data";
-import Autoplay from "embla-carousel-autoplay";
-import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
   CarouselDots,
   CarouselItem,
-} from "../ui/carousel";
-import { OverlayImage, OverlayImageContent } from "../ui/overlay-image";
+} from "@/components/ui/carousel";
+import {
+  OverlayImage,
+  OverlayImageContent,
+} from "@/components/ui/overlay-image";
+import { carouselSlides } from "@/lib/data";
+import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 export default function HeroCarousel() {
   const autoplay = Autoplay({

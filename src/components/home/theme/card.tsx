@@ -13,9 +13,9 @@ interface ThemeCardProps {
   title: string;
   slug: string;
   description: string;
-  className?: string;
   bgColor?: string;
   cta?: string;
+  className?: string;
 }
 
 export function ThemeCard({
@@ -28,10 +28,7 @@ export function ThemeCard({
 }: ThemeCardProps) {
   return (
     <Card
-      className={cn(
-        "text-primary max-w-80 gap-8 border-none p-8 shadow-lg",
-        className,
-      )}
+      className={cn("text-primary gap-8 border-none p-8 shadow-lg", className)}
       style={{
         backgroundColor: `#${bgColor}`,
       }}

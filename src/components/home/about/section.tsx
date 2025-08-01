@@ -17,7 +17,7 @@ export default function AboutSection() {
         <PhotoStack images={images} />
         <div className="mx-auto flex max-w-xl flex-col items-center gap-6 text-center md:gap-8">
           <SectionTitle>Curieux voyageur</SectionTitle>
-          <p className="text-muted-foreground font-mono text-lg leading-relaxed">
+          <p className="text-muted-foreground font-mono leading-relaxed md:text-lg">
             Je passe de ruelles andalouses aux chemins du bout du monde pour
             écouter, goûter et raconter ce que chaque culture a de plus vivant.
           </p>

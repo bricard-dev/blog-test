@@ -1,17 +1,8 @@
+import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,6 +29,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${lora.variable} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
