@@ -12,7 +12,7 @@ const images = [
 export default function AboutSection() {
   return (
     <Section fullHeight className="relative py-28 md:py-40">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[url('/images/background.jpg')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[url('/images/background.jpg')] bg-cover bg-center opacity-5" />
       <div className="space-y-16 md:space-y-20">
         <PhotoStack images={images} />
         <div className="mx-auto flex max-w-xl flex-col items-center gap-6 text-center md:gap-8">
@@ -21,7 +21,7 @@ export default function AboutSection() {
             Je passe de ruelles andalouses aux chemins du bout du monde pour
             écouter, goûter et raconter ce que chaque culture a de plus vivant.
           </p>
-          <Button>Découvrez moi</Button>
+          <Button>Qui suis-je ?</Button>
         </div>
       </div>
     </Section>

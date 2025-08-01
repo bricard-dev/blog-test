@@ -70,10 +70,10 @@ type PhotoStackProps = {
 
 function PhotoStack({
   images,
-  spread = 200,
+  spread = 225,
   rotate = 8,
   height = 400,
-  width = 280,
+  width = 300,
   className,
 }: PhotoStackProps) {
   const centerIndex = useMemo(() => (images.length - 1) / 2, [images.length]);
@@ -117,8 +117,8 @@ type PhotoStackItemProps = {
 function PhotoStackItem({ img, isCenter, style, index }: PhotoStackItemProps) {
   return (
     <div
-      className={cn("absolute top-0 overflow-hidden rounded-2xl shadow-xl", {
-        "md:scale-110": isCenter,
+      className={cn("absolute top-0 overflow-hidden rounded-3xl shadow-xl", {
+        "md:scale-115": isCenter,
         "hidden md:block": !isCenter,
       })}
       style={{ ...style }}

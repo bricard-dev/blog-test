@@ -1,4 +1,5 @@
 import Category from "@/components/ui/category";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type LastPostsCardProps = {
@@ -10,6 +11,7 @@ type LastPostsCardProps = {
     src: string;
     alt: string;
   };
+  className?: string;
 };
 
 export default function LastPostsCard({
@@ -18,9 +20,12 @@ export default function LastPostsCard({
   description,
   date,
   image,
+  className,
 }: LastPostsCardProps) {
   return (
-    <div className="group flex h-full max-w-full flex-col gap-4">
+    <div
+      className={cn("group flex h-full max-w-full flex-col gap-4", className)}
+    >
       <div className="relative h-80 w-full overflow-hidden rounded-sm">
         <div className="absolute inset-0 z-10 transition-colors duration-300 ease-in-out group-hover:bg-black/20" />
         <Image src={image.src} alt={image.alt} fill className="object-cover" />

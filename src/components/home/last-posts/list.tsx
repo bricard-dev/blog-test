@@ -60,7 +60,7 @@ export default function LastPostsList() {
       {posts.map((post, index) => (
         <Link
           key={post.id}
-          className={cn("", {
+          className={cn("border-b pb-6 last:border-none md:border-none", {
             "block md:col-span-2 lg:col-span-1":
               index === posts.length - 1 && posts.length % 2 !== 0,
           })}
